@@ -8,7 +8,8 @@ public class BpmToMsConverterTest {
     @Test
     public void testGetMsFromBpm() {
         BpmToMsConverter sixtyBpm = new BpmToMsConverter(60);
-        assertEquals(60000, sixtyBpm.milliSeconds);
+        assertEquals(60, sixtyBpm.bpm);
+        assertEquals(1000, sixtyBpm.getMsFromBpm());
     }
     
 }
